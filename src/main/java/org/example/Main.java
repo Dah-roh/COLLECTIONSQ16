@@ -66,6 +66,8 @@ public class Main implements Generics<Long, Boolean>{
 //     2. Search by number(returns a specific person's data)
 //     NOTE: Make your code DRY and employ proper space complexity
 
+    // TODO: Read up on LinkedList
+
     @Override
     public Long save(Long aLong, Boolean aBoolean) {
         return null;
