@@ -60,14 +60,14 @@ public class Main implements Generics<Long, Boolean>{
         List<String> listString = new ArrayList<>();
 
 
-        LinkedList stringLinkedList = new LinkedList();
+        LinkedList<String> stringLinkedList = new LinkedList<>();
         stringLinkedList.insert("daro");
         stringLinkedList.insert("gadibia");
         stringLinkedList.insert("victory");
 
         stringLinkedList.printLinkedList();
 
-
+        LinkedHashMap<String, String> linkedHashMap = new LinkedHashMap<>();
     }
 
 //    TODO: Create a phonebook(containing individual contact info i.e.

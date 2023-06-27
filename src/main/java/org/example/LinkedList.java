@@ -2,14 +2,14 @@ package org.example;
 
 import org.example.Models.Node;
 
-public class LinkedList {
+public class LinkedList<G> {
     Node head;
 
     public LinkedList() {
         this.head = null;
     }
 
-    public void insert(String data){
+    public void insert(G data){
         Node dataNode = new Node(data);
         if (head == null){
             head = dataNode;
@@ -34,7 +34,7 @@ public class LinkedList {
         else{
             Node currentNode = head;
             System.out.print("[");
-            while(currentNode.getNext()!=null){
+            while(currentNode!=null){
                 System.out.print(currentNode.getData()+" ");
                 currentNode = currentNode.getNext();
             }

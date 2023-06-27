@@ -1,23 +1,22 @@
 package org.example.Models;
 
-public class Node {
-    private String data;
+public class Node<G> {
+    private G data;
     private Node next;//composition
-    private Node previous;
 
     //Singly linkedList;
     //Doubly linkedList;
     //Cyclical linkedList;
-    public Node(String data) {
+    public Node(G data) {
         this.data = data;
         this.next = null;
     }
 
-    public String getData() {
+    public G getData() {
         return data;
     }
 
-    public void setData(String data) {
+    public void setData(G data) {
         this.data = data;
     }
 
