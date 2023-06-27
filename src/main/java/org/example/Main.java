@@ -67,7 +67,7 @@ public class Main implements Generics<Long, Boolean>{
 
         stringLinkedList.printLinkedList();
 
-        Lin
+
     }
 
 //    TODO: Create a phonebook(containing individual contact info i.e.
