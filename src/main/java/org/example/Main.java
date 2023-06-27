@@ -58,6 +58,16 @@ public class Main implements Generics<Long, Boolean>{
 
         //ArrayList<>() is a constructor from the Arrays class
         List<String> listString = new ArrayList<>();
+
+
+        LinkedList stringLinkedList = new LinkedList();
+        stringLinkedList.insert("daro");
+        stringLinkedList.insert("gadibia");
+        stringLinkedList.insert("victory");
+
+        stringLinkedList.printLinkedList();
+
+        Lin
     }
 
 //    TODO: Create a phonebook(containing individual contact info i.e.
