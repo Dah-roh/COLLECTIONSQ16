@@ -2,11 +2,10 @@ package org.example;
 
 import org.example.Models.Person;
 
-public class TestingGenerics implements Generics<Person>{
+public class TestingGenerics{
 
-
-    @Override
-    public void save(Person person) {
-
+    public static String print(String className) {
+        return className.split(".").toString();
     }
+
 }

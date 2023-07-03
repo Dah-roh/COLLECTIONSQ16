@@ -1,9 +1,17 @@
 package org.example;
 
+import org.example.Models.Person;
+
 import java.util.*;
+import java.util.function.Supplier;
 
 public class Main{
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoSuchMethodException {
+
+
+
+
+
         //Terminal Operations:
         //collect()
         //count()
