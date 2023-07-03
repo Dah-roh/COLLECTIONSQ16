@@ -15,7 +15,8 @@ public class Phonebook {
         System.out.println(person.getName()+" is "+person.getAge()+" years old.");
     }
     public static Person addToPersonAge(Person person) {
-        person.setAge(person.getAge()+1);
+        int age = person.getAge();
+        person.setAge(age+1);
         return person;
     }
     public static void addContact (Person contactInfo){

@@ -29,10 +29,10 @@ public class FunctionalInterface {
         );
 
         List<Person> personList = Arrays.asList(person, person1, person2);
-        personList.stream().map(
+        personList = personList.stream().map(
                 Phonebook::addToPersonAge
 
-        );
+        ).collect(Collectors.toList());
         System.out.println(personList);
     }
 }
