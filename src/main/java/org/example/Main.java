@@ -1,11 +1,6 @@
 package org.example;
 
-import org.example.Models.Person;
-import org.example.Service.Phonebook;
-
 import java.util.*;
-import java.util.function.Consumer;
-import java.util.function.Function;
 
 public class Main{
     public static void main(String[] args) {
