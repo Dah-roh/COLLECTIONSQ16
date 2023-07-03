@@ -1,5 +1,5 @@
 package org.example;
 
-public interface Generics<T, G>{
-    T save(T t, G g);
+public interface Generics<T>{
+    void save(T t);
 }

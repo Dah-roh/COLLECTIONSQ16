@@ -2,23 +2,35 @@ package org.example.Service;
 
 import org.example.Models.Person;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
 public class Phonebook {
 
-    static List<Person> contactList;
-    private HashMap<String, List<Integer>> searchByName;
-    private HashMap<Integer, Integer> searchByNumber;
+    public static List<Person> contactList;
+    public static HashMap<String, List<Integer>> searchByName;
+    static HashMap<Long, Integer> searchByNumber;
 
-    public static void main(String[] args) {
+    public static void addContact (Person contactInfo){
+        contactList = contactList== null?new ArrayList<>():contactList;
+        searchByName = searchByName== null?new HashMap<>():searchByName;
+        searchByNumber = searchByNumber== null?new HashMap<>():searchByNumber;
 
-//        contactList.get(searchByNumber.get(08094747390));
-//        contactList.indexOf(person);
+        contactList.add(contactInfo);
 
-//        ArrayList<Person> person = new ArrayList<>();
-//        List<Person> personList = new ArrayList<>();
-//        Person [] personArray;
-
+        Integer index = contactList.indexOf(contactInfo);
+        if (searchByName.get(contactInfo.getName())==null) {
+            List<Integer> indices = new ArrayList<>();
+            indices.add(index);
+            searchByName.put(contactInfo.getName(), indices);
+        }
+        else{
+            searchByName.get(contactInfo.getName()).add(index);
+        }
+        searchByNumber.put(contactInfo.getPhoneNumber(), index);
     }
+
+
 }

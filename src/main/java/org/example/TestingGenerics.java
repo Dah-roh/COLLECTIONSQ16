@@ -2,12 +2,11 @@ package org.example;
 
 import org.example.Models.Person;
 
-public class TestingGenerics implements Generics<Person, String>{
+public class TestingGenerics implements Generics<Person>{
 
 
     @Override
-    public Person save(Person person, String s) {
+    public void save(Person person) {
 
-        return null;
     }
 }

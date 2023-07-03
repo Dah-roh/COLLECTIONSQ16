@@ -1,8 +1,13 @@
 package org.example;
 
-import java.util.*;
+import org.example.Models.Person;
+import org.example.Service.Phonebook;
 
-public class Main implements Generics<Long, Boolean>{
+import java.util.*;
+import java.util.function.Consumer;
+import java.util.function.Function;
+
+public class Main{
     public static void main(String[] args) {
         //Terminal Operations:
         //collect()
@@ -66,7 +71,6 @@ public class Main implements Generics<Long, Boolean>{
         stringLinkedList.insert("victory");
 
         stringLinkedList.printLinkedList();
-
         LinkedHashMap<String, String> linkedHashMap = new LinkedHashMap<>();
     }
 
@@ -78,8 +82,6 @@ public class Main implements Generics<Long, Boolean>{
 
     // TODO: Read up on LinkedList
 
-    @Override
-    public Long save(Long aLong, Boolean aBoolean) {
-        return null;
-    }
+
+
 }
