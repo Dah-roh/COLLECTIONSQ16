@@ -11,12 +11,12 @@ import java.util.stream.Collectors;
 public class FunctionalInterface {
 
     public static void main(String[] args) {
-        CustomFunctionalInterface<Person> saveContact = Phonebook::addContact;
+//        CustomFunctionalInterface<Person> saveContact = Phonebook::addContact;
         Person person = new Person("King", 150, 23498674424l );
         Person person1 = new Person("Queen", 15, 23498674424l );
         Person person2 = new Person("Princess", 10, 23498674424l );
 
-        saveContact.save(person);
+//        saveContact.save(person);
 
         Arrays.asList(1, 2, 4, 56, 67, 7, 77).stream().forEach(
                 System.out::println

@@ -9,8 +9,10 @@ import java.util.List;
 public class Phonebook {
 
     public static List<Person> contactList;
-    public static HashMap<String, List<Integer>> searchByName;
-    static HashMap<Long, Integer> searchByNumber;
+    public HashMap<String, List<Integer>> searchByName;
+    public HashMap<Long, Integer> searchByNumber;
+
+
     public  static void printPersonAge(Person person){
         System.out.println(person.getName()+" is "+person.getAge()+" years old.");
     }
@@ -19,9 +21,11 @@ public class Phonebook {
         person.setAge(age+1);
         return person;
     }
-    public static void addContact (Person contactInfo){
 
-        contactList = contactList== null?new ArrayList<>():contactList;
+
+    public void addContact(Person contactInfo){
+        //Lazy loading
+        contactList = contactList==null?new ArrayList<>():contactList;
         searchByName = searchByName== null?new HashMap<>():searchByName;
         searchByNumber = searchByNumber== null?new HashMap<>():searchByNumber;
 
