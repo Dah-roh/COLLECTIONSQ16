@@ -7,11 +7,16 @@ import java.util.*;
 import java.util.function.Predicate;
 
 public class PQueueFunctional {
+
+
     static PriorityQueue<UserDTO> mapPriorityQueue = new PriorityQueue<>(10, new UserDTO());
+
+    //Below is a map holding String(name of a product) and PriorityQueue(a queue for users willing to buy aforementioned product)
+    //e.g a line for people buying a specific product.
     static HashMap<String, PriorityQueue<UserDTO>> productPriorityQueueMap;
     static Queue<User> userQueue = new PriorityQueue<>();
     private static User user;
-    private static final Predicate<String> isProductQueueAvailable = productName -> productPriorityQueueMap.get(productName)!=null;
+    private static final Predicate<String> isProductQueueAvailable = productName -> productPriorityQueueMap.get(productName)==null;
 
     public void addCustomerToQueue(User user1) {
         user = user1;
@@ -29,7 +34,7 @@ public class PQueueFunctional {
         UserDTO userDTO = product.generateUserDTO();
         userDTO.setUserName(user.getName());
         userDTO.setProductQuantity(product.getQuantity());
-        if (isProductQueueAvailable.negate().test(product.getProductName())) {
+        if (isProductQueueAvailable.test(product.getProductName())) {
             mapPriorityQueue.add(userDTO);
             userQueue.add(user);
             productPriorityQueueMap.put(product.getProductName(), mapPriorityQueue);

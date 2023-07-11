@@ -1,5 +1,7 @@
 package org.example.Models;
 
+import org.example.ClassExample;
+
 public class Person {
     private String name;
     private int age;
@@ -21,6 +23,9 @@ public class Person {
     }
 
     public String getName() {
+        if (ClassExample.testP.test("")){
+
+        };
         return name;
     }
 
